@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en-IN">
+	<head>
+		<!--Basic meta tags-->
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<!--Load Materialize Asynchronously-->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css" media="none" onload="if(media!='screen,projection')media='screen,projection'">
+		<!--Load Material Icon Font Asynchronously-->
+		<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" media="none" onload="if(media!='screen,projection')media='screen,projection'">
+		<!--Set the shortcut icon-->
+		<link rel="shortcut icon" type="image/png" href="favicon-black.png">
+		<!--Let browser know website is optimized for mobile-->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<!--Progressive Web App meta tags-->
+		<link rel="manifest" href="manifest.json">
+		<meta name="theme-color" content="#FFFFFFF">
+		<meta name="Description" content="Generate certificates for participants of Bengaluru Plog Run">
+		<!--Title-->
+		<title>Certificate Generator | BPR</title>
+		<!--Internal Styles-->
+		<style>
+			body{
+				background-color:#F6F6F6;
+				display: flex;
+				min-height: 100vh;
+				flex-direction: column;
+			}
+			main{
+				flex: 1 0 auto;
+			}
+			nav{
+				background-color: #FF591F;
+				padding-left: 2em;
+				padding-right: 2em;
+			}
+			.strong{
+				font-size:1.5em;
+			}
+		</style>
+	</head>
+	<body>
+		<main>
+			<div class="navbar-fixed" id="header"></div>
+			
+		</main>
+		<footer id="footer" class="page-footer" style="padding:0px 0px 0px 0px;"></footer>
+		<!--Load Scripts Asynchronously-->
+		<script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous" async></script>
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js" async></script>
+		<script type="text/javascript" src="main.js" async></script>
+	</body>
+</html>
