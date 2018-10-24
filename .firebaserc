@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "bengaluru-plog-run"
+  },
+  "targets": {
+    "bengaluru-plog-run": {
+      "hosting": {
+        "bpr-certgen": [
+          "bpr-certgen"
+        ]
+      }
+    }
+  }
+}
