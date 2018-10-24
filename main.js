@@ -13,4 +13,41 @@ window.onload = function(){
 	// Load Footer
 	$("#footer").load("footer.html");
 
+	// Set focus
+	document.getElementById("appPin").focus();
+
+	// Handle PIN authentication
+	$("#appPin").keyup(signIn);
+
+	// Handle certificate type
+	$(".with-gap").change(changeCertType);
+
+}
+
+// Handle sign in
+function signIn(){
+	if(document.getElementById("appPin").value === "2772"){
+		// Sign in is legal, do post-sign in stuff
+		document.getElementById("signInCard").style.display = "none";
+		document.getElementById("certgenCard").style.display = "block";
+		document.getElementById("name").focus();
+	}
+}
+
+// Handle UI changes based on certificate type
+function changeCertType(){
+	if(document.getElementById("participationCert").checked == true){
+		document.getElementById("emailCertificate").style.display = "block";
+		document.getElementById("generateCertificate").classList.remove("s6");
+		document.getElementById("generateCertificate").classList.remove("offset-s3");
+		document.getElementById("generateCertificate").classList.add("offset-s1");
+		document.getElementById("generateCertificate").classList.add("s5");
+	}
+	else{
+		document.getElementById("emailCertificate").style.display = "none";
+		document.getElementById("generateCertificate").classList.remove("offset-s1");
+		document.getElementById("generateCertificate").classList.remove("s5");
+		document.getElementById("generateCertificate").classList.add("offset-s3");
+		document.getElementById("generateCertificate").classList.add("s6");
+	}
 }

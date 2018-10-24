@@ -34,19 +34,79 @@
 				padding-right: 2em;
 			}
 			.strong{
-				font-size:1.5em;
+				font-size:1.5em !important;
+				font-weight: bold !important;
 			}
 		</style>
 	</head>
 	<body>
 		<main>
+
+			<!-- Navbar (Loaded asynchronously by jQuery as common header from header.html) -->
 			<div class="navbar-fixed" id="header"></div>
-			
+
+			<!-- Sign in card -->
+			<div id="signInCard" class="row" style="margin-top:12.5%;">
+				<div class="col s4 offset-s4">
+					<div class="card">
+						<div class="card-content">
+							<span class="card-title strong">Enter PIN</span>
+							<p>Obviously, only authorized people can do this.</p>
+							<hr />
+							<div class="row">
+								<div class="col s4 offset-s4 input-field">
+									<input style="letter-spacing:15px;" class="center-align" id="appPin" maxlength="4" type="password" class="validate">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Main content -->
+			<div id="certgenCard" class="row" style="margin-top:12.5%; display:none;">
+				<div class="col s4 offset-s4">
+					<div class="card">
+						<div class="card-content">
+							<span class="card-title strong">Generate Certificate</span>
+							<p>You'll need a name.</p>
+							<hr />
+							<div class="row">
+								<div class="col s8 offset-s2 input-field">
+									<input class="center-align" id="name" type="text" class="validate">
+									<label for="name">Name</label>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col s8 offset-s2 center-align">
+									<p>
+										<label><input class="with-gap" id="participationCert" name="typeOfCert" type="radio" checked /><span>Participation</span></label>
+										&emsp;
+										<label><input class="with-gap" id="appreciationCert" name="typeOfCert" type="radio" /><span>Appreciation</span></label>
+									</p>
+								</div>
+							</div>
+							<div class="row">
+								<div id="generateCertificate" class="col s5 offset-s1 center-align">
+									<a id="generateCertificateButton" class="waves-effect waves-light btn">Generate Certificate</a>
+								</div>
+								<div id="emailCertificate" class="col s5 center-align">
+									<a id="emailCertificateButton" class="waves-effect waves-light btn">Email Certificate</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
 		</main>
+
+		<!-- Navbar (Loaded asynchronously by jQuery as common footer from footer.html) -->
 		<footer id="footer" class="page-footer" style="padding:0px 0px 0px 0px;"></footer>
+
 		<!--Load Scripts Asynchronously-->
 		<script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous" async></script>
 		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js" async></script>
 		<script type="text/javascript" src="main.js" async></script>
+
 	</body>
 </html>
