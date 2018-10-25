@@ -22,6 +22,9 @@ window.onload = function(){
 	// Handle certificate type
 	$(".with-gap").change(changeCertType);
 
+	// Generate Certificate
+	$("#generateCertificateButton").click(generateCertificate);
+
 }
 
 // Handle sign in
@@ -50,4 +53,10 @@ function changeCertType(){
 		document.getElementById("generateCertificate").classList.add("offset-s3");
 		document.getElementById("generateCertificate").classList.add("s6");
 	}
+}
+
+// Handle Certificate Generation
+function generateCertificate(){
+	if(document.getElementById("appreciationCert").checked==true) window.location.href = "generateACert.html#" + document.getElementById("name").value;
+	else window.location.href = "generatePCert.html#" + document.getElementById("name").value;
 }

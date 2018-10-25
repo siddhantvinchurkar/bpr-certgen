@@ -1,0 +1,29 @@
+<style>.container{position: relative; text-align: center; color: #000000; height: 952.32px; width: 1280px;}/* Bottom left text */.name{position: absolute; top: 50%; left: 15%; width: 910px; text-align: center; font-weight: bold; font-size: 30px;}</style>
+<div id="cert" class="container">
+	<img src="certificate-of-appreciation.png" alt="Certificate Of Appreciation" style="width:100%;"> 
+	<div id="name" class="name">Some Name</div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
+<script>
+window.onload=function(){
+	document.getElementById("name").innerHTML=decodeURI(window.location.hash.substr(1));PrintDiv(document.getElementById("cert"));
+}
+
+function PrintDiv(div){
+	html2canvas((div),{
+		onrendered: function(canvas){
+		var myImage=canvas.toDataURL();
+		downloadURI(myImage, "BPR-Certificate-"+decodeURI(window.location.hash.substr(1))+".png");
+		}
+	});
+}
+
+function downloadURI(uri, name){
+	var link=document.createElement("a");console.log(uri);
+	link.download=name;
+	link.href=uri;
+	document.body.appendChild(link);
+	link.click();
+	window.location.href="index.html";
+}
+</script>

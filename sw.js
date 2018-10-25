@@ -11,7 +11,7 @@
  * See https://goo.gl/2aRDsh
  */
 
-importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.2/workbox-sw.js");
+importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 /**
  * The workboxSW.precacheAndRoute() method efficiently caches and responds to
@@ -26,6 +26,14 @@ self.__precacheManifest = [
   {
     "url": "404.js",
     "revision": "8cbe7f5ba2430da5719300505ed612d2"
+  },
+  {
+    "url": "certificate-of-appreciation.png",
+    "revision": "72babcf6f168e95348b0b8dc36be3a1c"
+  },
+  {
+    "url": "certificate-of-participation.png",
+    "revision": "1944507fa8b2570199b0784e30b600e4"
   },
   {
     "url": "favicon-black.png",
@@ -44,16 +52,24 @@ self.__precacheManifest = [
     "revision": "21011dd07012de003a757f9ab0021fa0"
   },
   {
+    "url": "generateACert.html",
+    "revision": "7f7fa0bd0b027a3c499e0a6ccc50b49a"
+  },
+  {
+    "url": "generatePCert.html",
+    "revision": "3250cf053d84dcdf2d85ae29380c7edb"
+  },
+  {
     "url": "header.html",
-    "revision": "14587e11877efdbd012fb92e06297c26"
+    "revision": "7c5358b10b778f739544baefcc651c36"
   },
   {
     "url": "index.html",
-    "revision": "36eb4d668aecbbee5273e9981641ab60"
+    "revision": "13387e100e44eb2d4b773a63384c0bd6"
   },
   {
     "url": "main.js",
-    "revision": "8cbe7f5ba2430da5719300505ed612d2"
+    "revision": "29855e63ae1e21ede5763502abf6aca6"
   },
   {
     "url": "manifest.json",
@@ -61,7 +77,7 @@ self.__precacheManifest = [
   },
   {
     "url": "README.md",
-    "revision": "c136a9021978d48533d7a0995e01f7e2"
+    "revision": "44f59ccf9b1d2fb13f5ec449725f5fc9"
   },
   {
     "url": "workbox-config.js",
